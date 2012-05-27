@@ -31,13 +31,15 @@
       $('<div id="hackernews-stream" class="BltHke nH oy8Mbf" style="display: none;"></div>').prependTo(_this.main_content);
       $('<div id="hackernews-bar" class="D E G-atb" style="display: none;"><div class="nH aqK"><div class="Cq aqL" gh="mtb"><div><div><div class="G-Ni J-J5-Ji" style=""><div class="T-I J-J5-Ji nu T-I-ax7 L3" act="20" title="Refresh" role="button" tabindex="0"><div class="asa"><span class="J-J5-Ji ask">&nbsp;</span><div class="asf T-I-J3 J-J5-Ji"></div></div></div></div></div></div></div><div class="Cr aqJ"><div class="ar5 J-J5-Ji"><span class="Di"><div id=":160" class="J-J5-Ji amH"><span class="Dj"><b>1</b></span></div><div id=":162" class="T-I J-J5-Ji amD T-I-awG amE T-I-ax7 T-I-Js-IF L3" title="Newer" role="button" tabindex="0"><span class="amF">&nbsp;</span><img class="amI T-I-J3" src="images/cleardot.gif" alt=""></div><div id=":163" class="T-I J-J5-Ji amD T-I-awG T-I-ax7 T-I-Js-Gs L3" title="Older" role="button" tabindex="0"><span class="amF">&nbsp;</span><img class="amJ T-I-J3" src="images/cleardot.gif" alt=""></div></span></div></div></div></div>').prependTo(_this.main_content_bar);
 
-      this.refreshHN();
+      _this.refreshHN();
 
+      // Refresh button click event
       $(_this.main_content_bar).find('#hackernews-bar .Cq.aqL').click(function() {
+        console.log('Refresh Button Click');
+        console.log(_this);
         _this.page = 1;
         _this.refreshHN();
       });
-
 
       $(_this.main_content_bar).find('#hackernews-bar [title="Newer"]').click(function() {
         if(_this.page > 1) {
