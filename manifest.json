@@ -1,0 +1,10 @@
+{
+  "name": "Hacker News for Gmail",
+  "version": "0.1",
+  "description": "Browse the Hacker News articles right from you GMail dashboard.",
+  "background_page": "background.html",
+  "permissions": [
+    "tabs",
+    "*://*/*"
+  ]
+}
